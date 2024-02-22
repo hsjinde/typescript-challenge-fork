@@ -11,6 +11,12 @@
  * 輸出: 'Input is a number: 123'
  */
 
-export function handleInput(input) {
+export function handleInput(input: string | number) {
     // 在此實現函式
+    switch(typeof input){
+        case 'string':
+            return 'Input is a string: ' + input
+        case 'number':
+            return 'Input is a number: ' + input
+    }
 }

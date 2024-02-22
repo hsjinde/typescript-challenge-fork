@@ -13,7 +13,19 @@
  * 輸出: [{ id: 1, task: 'Buy milk', completed: false }, { id: 2, task: 'Walk the dog', completed: false }]
  */
 
+interface Todo{
+    id: number,
+    task: string,
+    completed: boolean 
+}
+
 export function addTodo(todos: Todo[], task: string): Todo[] {
     // 在此實現函式
-    return [...todos, newTodo];
+    const newTodo: Todo = {
+        id: todos.length + 1, // 使用現有待辦事項數量加 1 作為新的 ID
+        task,
+        completed: false, // 新增的待辦事項預設為未完成
+    };
+    return [...todos, newTodo]; //...todos：這將現有 todos 陣列的所有元素展開到新陣列中。
+
 }

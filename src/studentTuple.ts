@@ -9,4 +9,8 @@
 
 export function printStudentInfo(student) {
     // 在此實現函式
+    const [name, score] = student;
+    const infoString = `${name}: ${score}%`
+    return infoString
 }
+
